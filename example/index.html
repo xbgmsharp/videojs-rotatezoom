@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="../video-js/video-js.css" rel="stylesheet">
+  <script src="../video-js/video.dev.js"></script>
+  <script>
+    videojs.options.flash.swf = "../video-js/video-js.swf"
+  </script>
+  <!-- <script src="../vjs.zoomrotate.js"></script> -->
+  <!-- For debugging -->
+  <script src="../src/vjs.zoomrotate.js"></script>
+</head>
+<body>
+  <video id="video_1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{"rotate": "90", "zoom": "1.5"}'>
+    <source src="http://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973_512kb.mp4" type="video/mp4">         
+    <source src="http://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973.ogv" type="video/ogg">
+    <p>Video Playback Not Supported<br/>Your browser does not support the video tag.</p>
+  </video>
+<script>
+// initialize video.js
+var my_video_id = videojs('video_1');
+
+// Set value to the plugin
+my_video_id.zoomrotate({
+  rotate: 90,
+  zoom: 1.5
+  });
+</script>
+</body>
+</html>
