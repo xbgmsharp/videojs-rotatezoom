@@ -20,3 +20,7 @@ It use the CSS scale property and the rotate property.
 Known Issues
 ------------
 It won't work when using the flash fallback.
+
+Thanks
+------------
+Thanks to codepo8, https://github.com/codepo8/rotatezoomHTML5video
