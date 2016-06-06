@@ -22,6 +22,17 @@ or
 
     data-setup='{ "plugins": { "zoomrotate": { "rotate": "90", "zoom": "1.5" } } }'
 
+Options
+-------
+
+```text
+    defaults = {
+      zoom: 1,
+      rotate: 0,
+      debug: true
+    };
+```
+
 Known Issues
 ------------
 It won't work when using the flash fallback.
