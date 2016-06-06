@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link href="../video-js/video-js.css" rel="stylesheet">
-  <script src="../video-js/video.dev.js"></script>
+  <meta charset="utf-8" />
+  <title>Video.js Zoom Rotate Example</title>
+  <link href="../video.js/video-js.css" rel="stylesheet">
+  <script src="../video.js/video.js"></script>
   <script>
-    videojs.options.flash.swf = "../video-js/video-js.swf"
+    videojs.options.flash.swf = "../video.js/video-js.swf"
   </script>
   <!-- <script src="../videojs.zoomrotate.js"></script> -->
   <!-- For debugging -->
   <script src="../src/videojs.zoomrotate.js"></script>
+  <style>
+    p {
+      background-color: #eee;
+      border: thin solid #777;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
+  <p>The zoomrotate plugin rotate the poster and the video. Give it a shot:</p>
+
   <video id="video_1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{"rotate": "90", "zoom": "1.5"}'>
     <source src="http://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973_512kb.mp4" type="video/mp4">         
     <source src="http://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973.ogv" type="video/ogg">
