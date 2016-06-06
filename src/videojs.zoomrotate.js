@@ -5,9 +5,9 @@ console.log('zoomrotate: Start');
     console.log('zoomrotate: Init defaults');
     defaults = {
       zoom: 1,
-      rotate: 0
+      rotate: 0,
+      debug: true
     };
-    console.log('zoomrotate: Init Extend');
     extend = function() {
       var args, target, i, object, property;
       args = Array.prototype.slice.call(arguments);
@@ -31,7 +31,7 @@ console.log('zoomrotate: Start');
     * register the zoomrotate plugin
     */
     videojs.plugin('zoomrotate', function(options){
-        console.log('zoomrotate: Register init');
+        if (defaults.debug) console.log('zoomrotate: Register init');
         var settings, player, video, poster;
         settings = extend(defaults, options);
 
@@ -40,10 +40,10 @@ console.log('zoomrotate: Start');
         video = this.el().getElementsByTagName('video')[0];
         poster = this.el().getElementsByTagName('div')[1]; // div vjs-poster
 
-        console.log('zoomrotate: '+video.style);
-        console.log('zoomrotate: '+poster.style);
-        console.log('zoomrotate: '+options.rotate);
-        console.log('zoomrotate: '+options.zoom);
+        if (settings.debug) console.log('zoomrotate: '+video.style);
+        if (settings.debug) console.log('zoomrotate: '+poster.style);
+        if (settings.debug) console.log('zoomrotate: '+options.rotate);
+        if (settings.debug) console.log('zoomrotate: '+options.zoom);
 
         /* Array of possible browser specific settings for transformation */
         var properties = ['transform', 'WebkitTransform', 'MozTransform',
@@ -65,7 +65,7 @@ console.log('zoomrotate: Start');
         player.style.overflow = 'hidden';
         video.style[prop]='scale('+options.zoom+') rotate('+options.rotate+'deg)';
         poster.style[prop]='scale('+options.zoom+') rotate('+options.rotate+'deg)';
-        console.log('zoomrotate: Register end');
+        if (settings.debug) console.log('zoomrotate: Register end');
     });
 })();
 
