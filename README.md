@@ -2,6 +2,11 @@ Video.js Zoom Rotate
 =======================
 A plugin that allows you to set the Zoom level and a rotation for video and poster with [Video.js](https://github.com/videojs/video.js/).
 
+Install
+----------------
+Install it via bower with `bower i --save videojs-rotatezoom`
+
+
 Using the Plugin
 ----------------
 The plugin automatically registers itself when you include videojs.zoomrotate.js in your page:
@@ -15,7 +20,6 @@ It use the CSS scale property and the rotate property.
     video.zoomrotate({
       rotate: 90,
       zoom: 1.5
-      }
     });
 
 or
